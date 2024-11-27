@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Black Friday - ¡Grandes Descuentos!</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="style.css" rel="stylesheet">
+  <style>
+    /* Estilos Generales */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: white;
+    }
+
+    header {
+      text-align: center;
+      background-color: red;
+      color: white;
+      padding: 20px;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .countdown {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    /* Productos */
+    .product-card {
+      background-color: #1a1a1a;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(255, 0, 0, 0.3);
+    }
+
+    .discount-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: red;
+      color: white;
+      padding: 5px 10px;
+      font-size: 0.9rem;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .original-price {
+      text-decoration: line-through;
+      color: gray;
+      font-size: 0.9rem;
+    }
+
+    .discounted-price {
+      color: #00ff00;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .add-to-cart {
+      background-color: #ff4500;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .add-to-cart:hover {
+      background-color: #ff6347;
+    }
+  </style>
+</head>
+<body>
+  <!-- Encabezado -->
+  <header class="text-center bg-red-600 text-white p-6">
+    <h1 class="text-2xl font-bold">Black Friday - ¡Grandes Descuentos en Todos los Productos!</h1>
+    <div id="countdown" class="countdown mt-2 text-lg">
+      Termina en: <span id="time"></span>
+    </div>
+    <nav class="mt-4">
+      <a href="index.html" class="inline-block bg-white text-red-600 px-4 py-2 rounded-md shadow-md hover:bg-gray-200 transition duration-300">
+        Volver al Inicio
+      </a>
+    </nav>
+  </header>
+  
+
+  <!-- Productos -->
+  <main>
+    <div id="sale-product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
+      <!-- Los productos con descuento se renderizan aquí -->
+    </div>
+  </main>
+
+  <script src="black-friday.js"></script>
+</body>
+</html>

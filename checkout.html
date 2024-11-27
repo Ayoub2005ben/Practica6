@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finalizar Compra</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="style.css" rel="stylesheet">
+  <style>
+    .checkout-container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+    }
+
+    .product-summary img {
+      width: 80px;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .total {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: right;
+      margin-top: 20px;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    form input, form select, form button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    form button {
+      background-color: #1e3a8a;
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    form button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="text-center text-2xl font-bold my-4">Finalizar Compra</h1>
+  </header>
+  <main>
+    <div class="checkout-container">
+      <div id="product-summary">
+        <!-- Resumen de productos se renderiza aquí -->
+      </div>
+      <div class="total">
+        Total a pagar: <span id="checkout-total">0 €</span>
+      </div>
+      <form id="checkout-form">
+        <label for="name">Nombre Completo</label>
+        <input type="text" id="name" placeholder="Introduce tu nombre" required>
+        
+        <label for="address">Dirección de Envío</label>
+        <input type="text" id="address" placeholder="Introduce tu dirección" required>
+        
+        <label for="payment-method">Método de Pago</label>
+        <select id="payment-method" required>
+          <option value="" disabled selected>Selecciona un método</option>
+          <option value="credit-card">Tarjeta de Crédito</option>
+          <option value="paypal">PayPal</option>
+          <option value="bank-transfer">Transferencia Bancaria</option>
+        </select>
+
+        <button type="submit">Confirmar Compra</button>
+      </form>
+    </div>
+  </main>
+  <script src="checkout.js"></script>
+</body>
+</html>

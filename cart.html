@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de Compras</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="style.css" rel="stylesheet">
+  <style>
+    .cart-container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+    }
+
+    .cart-item img {
+      width: 80px;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .cart-item-info {
+      flex: 1;
+      margin-left: 15px;
+    }
+
+    .quantity-control {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .total-container {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="text-center text-2xl font-bold my-4">Carrito de Compras</h1>
+  </header>
+  <main>
+    <div class="cart-container">
+      <div id="cart-items">
+        <!-- Productos del carrito se renderizan aquí -->
+      </div>
+      <div class="total-container">
+        Total: <span id="cart-total">0 €</span>
+      </div>
+      <div class="text-center mt-4">
+        <button id="checkout" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700"><a href="checkout.html">Finalizar</a></button>
+      </div>
+    </div>
+    <div class="text-center mt-6">
+      <!-- Botón para volver a la tienda -->
+      <a href="index.html" class="bg-gray-700 text-white px-6 py-2 rounded hover:bg-gray-800">Volver a la tienda</a>
+    </div>
+  </main>
+  <script src="cart.js"></script>
+</body>
+</html>
+

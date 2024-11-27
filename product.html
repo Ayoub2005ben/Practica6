@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalles del Producto</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="style.css"></script>
+  
+</head>
+<body class="bg-gray-100 font-sans">
+  <!-- Header -->
+  <header class="bg-blue-600 text-white p-4 flex justify-between items-center shadow-lg">
+    <div class="flex items-center space-x-4">
+      <img src="logo.png" alt="Logo" class="h-10">
+      <h1 class="text-xl font-bold">Detalles del Producto</h1>
+    </div>
+    <a href="index.html" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded shadow">
+      Volver a la tienda
+    </a>
+  </header>
+
+  <!-- Contenedor principal -->
+  <div class="max-w-4xl mx-auto mt-6 bg-white rounded-lg shadow-md p-6">
+    <div id="product-details" class="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-8">
+      <!-- Detalles del producto se renderizan dinámicamente -->
+      <img id="product-image" src="" alt="" class="w-64 h-64 object-cover rounded-lg shadow">
+      <div class="space-y-4">
+        <h2 id="product-name" class="text-2xl font-bold"></h2>
+        <p id="product-price" class="text-xl text-green-600 font-semibold"></p>
+        <p id="product-description" class="text-gray-700"></p>
+        <p id="product-tags" class="text-sm text-gray-500"></p>
+        <button id="add-to-cart" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded shadow">
+          Agregar al carrito
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Contenedor de Valoraciones -->
+<div class="max-w-4xl mx-auto mt-6 bg-white rounded-lg shadow-md p-6">
+  <h2 class="text-xl font-bold mb-4">Valoraciones de Clientes</h2>
+  <div id="reviews" class="space-y-4">
+    <!-- Las valoraciones se renderizan dinámicamente aquí -->
+  </div>
+</div>
+
+  <script src="product.js"></script>
+</body>
+</html>
